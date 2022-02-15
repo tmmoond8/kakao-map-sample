@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, MapMarker, MapProps } from 'react-kakao-maps-sdk';
+import { Map, MapMarker, Circle } from 'react-kakao-maps-sdk';
 import { css } from '@emotion/react';
 import { Button } from '@chakra-ui/react';
 import BounceLoader from 'react-spinners/BounceLoader';
@@ -87,6 +87,16 @@ function App() {
               <div style={{ color: '#000' }}>Target</div>
             </MapMarker>
           )}
+          <Circle
+            center={center}
+            radius={1000}
+            strokeWeight={5} // 선의 두께입니다
+            strokeColor="#fae100" // 선의 색깔입니다
+            strokeOpacity={2} // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+            strokeStyle="solid" // 선의 스타일 입니다
+            fillColor="#e4dda3" // 채우기 색깔입니다
+            fillOpacity={0.7} // 채우기 불투명도 입니다
+          />
         </Map>
       )}
       {targetPoint && (
