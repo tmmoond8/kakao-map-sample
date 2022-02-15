@@ -22,6 +22,8 @@ function App() {
   const [targetPoint, setTargetPoint] = React.useState<Point | null>(null);
   const [level, setLevel] = React.useState<number>(3);
 
+  console.log('level', level);
+
   const bounds = React.useMemo(() => {
     const bounds = new kakao.maps.LatLngBounds();
     if (center) {
